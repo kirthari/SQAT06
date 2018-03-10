@@ -17,15 +17,15 @@ Given('I go to Figure1 registration page',function(callback) {
 When('I enter create account', function(callback){
   this.browser
   .waitForVisible('.register-page__username-input')
-  .setValue('.register-page__username-input','kirtan')
-  .setValue('.register-page__email-input','kirtan_bhavsar@yahoo.com')
+  .setValue('.register-page__username-input', this.randomUsers())
+  .setValue('.register-page__email-input',this.randomUsers()+'kirtan_bhavsar@yahoo.com')
   .setValue('.register-page__password-input','Parents1')
   .setValue('.register-page__confirm-password-input','Parents1')
   .addValue('.register-page__specialties-list','Physicion')
   .waitForVisible('.register-page__specialties-other-list')
   .addValue('.register-page__specialties-other-list','Cardiology Resident')
   .click('.box')
-  .click('.register-page__submit-button')
+  //.click('.register-page__submit-button')
     .then(function(){
     callback();
   }).catch(function(error){
