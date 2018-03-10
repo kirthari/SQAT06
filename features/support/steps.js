@@ -83,7 +83,7 @@ When('I search for bing', function(callback){
 Then('I should see the search result for google', function(callback) {
   this.browser
     .getTitle().then(function(result){
-        result.should.equal("bing - Google search");
+        result.should.equal("bing - Google Search");
         callback();
   }).catch(function(error){
     callback(error);
